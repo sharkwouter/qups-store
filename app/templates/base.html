@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Qups Store - Reuse to Reduce</title>
+    {% endif %}
+  </head>
+  <body>
+    <header>
+      <a href="/">Qups</a>
+    </header>
+    {% block content %}{% endblock %}
+    <footer>
+      <div class="contact">
+        Contact:
+      </div>
+      <div class="social">
+        Social media:
+      </div>
+    </footer>
+  </body>
+</html>

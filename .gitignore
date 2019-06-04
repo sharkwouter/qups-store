@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+venv/
+.flaskenv
+app.db
+migrations/
