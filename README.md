@@ -30,7 +30,6 @@ Maak de database aan:
 python -m flask db init
 python -m flask db migrate
 python -m flask db upgrade
-./fill_database.py
 ```
 
 Starten:

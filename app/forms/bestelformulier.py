@@ -4,4 +4,4 @@ from wtforms.validators import DataRequired
 
 class BestelFormulier(FlaskForm):
     aantal = IntegerField('Aantal', validators=[DataRequired()])
-    submit = SubmitField('Bestel')
+    submit = SubmitField('Bevestig aantal')

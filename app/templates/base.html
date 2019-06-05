@@ -10,9 +10,20 @@
   </head>
   <body>
     <header>
-      <a href="/">Qups</a>
+      <a href="{{ url_for('index') }}">Qups</a>
     </header>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
     {% block content %}{% endblock %}
+    <hr>
     <footer>
       <div class="contact">
         Contact:

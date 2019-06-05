@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Alle bestellingen:</h3>
+  {% for bestelling in bestellingen %}
+    <table>
+      <thead>
+        <th>Soort data</th>
+        <th>Waarde</th>
+      </thead>
+      <tr>
+        <td>Bestelnummer</td>
+        <td>{{ bestelling.id }}</td>
+      </tr>
+      <tr>
+        <td>Aantal</td>
+        <td>{{ bestelling.aantal }}</td>
+      </tr>
+      <tr>
+        <td>Prijs</td>
+        <td>{{ bestelling.prijs }}</td>
+      </tr>
+      <tr>
+        <td>Voornaam</td>
+        <td>{{ bestelling.voornaam }}</td>
+      </tr>
+      <tr>
+        <td>Achternaam</td>
+        <td>{{ bestelling.achternaam }}</td>
+      </tr>
+      <tr>
+        <td>E-mail</td>
+        <td>{{ bestelling.email }}</td>
+      </tr>
+      <tr>
+        <td>Adres</td>
+        <td>{{ bestelling.adres }}</td>
+      </tr>
+      <tr>
+        <td>Postcode</td>
+        <td>{{ bestelling.postcode }}</td>
+      </tr>
+      <tr>
+        <td>Plaats</td>
+        <td>{{ bestelling.plaats }}</td>
+      </tr>
+    </table>
+  {% endfor %}
+{% endblock %}

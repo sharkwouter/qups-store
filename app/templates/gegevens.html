@@ -1,5 +1,54 @@
 {% extends "base.html" %}
 
 {% block content %}
-  
+  Aantal cups: {{ aantal }}
+  Prijs: {{ prijs }}
+  <form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+      {{ form.voornaam.label }}<br>
+      {{ form.voornaam() }}<br>
+      {% for error in form.voornaam.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}
+    </p>
+    <p>
+      {{ form.achternaam.label }}<br>
+      {{ form.achternaam() }}<br>
+      {% for error in form.achternaam.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}
+    </p>
+    <p>
+      {{ form.email.label }}<br>
+      {{ form.email() }}<br>
+      {% for error in form.email.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}
+    </p>
+    <p>
+      {{ form.adres.label }}<br>
+      {{ form.adres() }}<br>
+      {% for error in form.adres.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}
+    </p>
+    <p>
+      {{ form.postcode.label }}<br>
+      {{ form.postcode() }}<br>
+      {% for error in form.postcode.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}
+    </p>
+    <p>
+      {{ form.plaats.label }}<br>
+      {{ form.plaats() }}<br>
+      {% for error in form.plaats.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}
+    </p>
+    <p>
+      {{ form.submit() }}
+    </p>
+  </form>
 {% endblock %}

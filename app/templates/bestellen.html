@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <form action="/gegevens" method="post" novalidate>
+  <form action="" method="post" novalidate>
     {{ form.hidden_tag() }}
     <p>
       {{ form.aantal.label }}<br>
-      {{ form.aantal() }}
+      {{ form.aantal() }}<br>
+      {% for error in form.aantal.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}
     </p>
     <p>
       {{ form.submit() }}
