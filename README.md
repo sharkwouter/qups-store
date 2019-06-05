@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 Maak een nieuw bestaand aan genaamd .flaskenv met daarin het volgende:
 ```bash
-FLASK_APP=flashcards.py
+FLASK_APP=qups-store.py
 SECRET_KEY=somepassword
 ```
 
