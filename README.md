@@ -18,7 +18,9 @@ Maak een nieuw bestaand aan genaamd .flaskenv met daarin het volgende:
 ```bash
 FLASK_APP=qups-store.py
 SECRET_KEY=somepassword
+ADMIN_PASSWORD=wachtwoord-voor-bestellingen-pagina
 ```
+Vervang de SECRET_KEY en ADMIN_PASSWORD voor ingewikkelde, veilige wachtwoorden.
 
 Debug modus kan als volgt aangezet worden in hetzelfde bestand:
 ```bash
