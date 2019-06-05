@@ -2,6 +2,7 @@ from flask import render_template, flash, redirect, url_for
 from app import app, db
 from app.models import Order
 from app.forms import BestelFormulier, GegevensFormulier
+import os
 
 @app.route('/')
 @app.route('/index')
@@ -39,7 +40,10 @@ def gegevens(aantal):
         return redirect(url_for('index'))
     return render_template('gegevens.html', title=title, aantal=aantal, prijs=prijs, form=form)
 
-@app.route('/bestellingen')
-def bestellingen():
+@app.route('/bestellingen/<key>')
+def bestellingen(key):
     title = "Bestellingen"
+    password = os.environ.get('ADMIN_PASSWORD')
+    if not key or key != password:
+        return redirect(url_for('index'))
     return render_template('bestellingen.html', title=title, bestellingen=Order.query.all())
