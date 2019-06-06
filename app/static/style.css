@@ -1,8 +1,88 @@
 body {
   margin: 0px;
-  background-color: red;
+}
+
+.topnav {
+  height: 128px;
+}
+
+.topnav .column {
+  width: 33.33%;
+  float: left;
+  height: 100%;
+  background-color: white;
+}
+
+.topnav .logo {
+  height: 88px;
+  margin-top: 20px;
+  margin-left: 42px;
+}
+
+.topnav .column nav {
+  font-size: 24px;
+  margin-top: 70px;
+  font-family: arial;
+  font-weight: normal;
+  text-align: center;
 }
 
 header {
-  background-color: blue;
+  clear: both;
+  width: 100%;
+  height: 245px;
+  background-color: #A3D6DA;
+}
+
+header .column {
+  float: left;
+}
+
+header .column.left {
+  width: 66.66%;
+  text-align: left;
+
+  margin-left: 60px;
+}
+
+header h1 {
+  font-size: 60px;
+  margin-top: 58px;
+  margin-bottom: 0px;
+  font-weight: lighter;
+}
+
+header h3 {
+  font-size: 30px;
+  margin-top: 30px;
+  font-weight: lighter;
+}
+
+header .column.right {
+  width: 33.33%;
+}
+
+.content {
+  clear: both;
+  margin-top: 82px;
+  text-align: center;
+}
+
+.content .productimg {
+  height: 388px;
+}
+
+footer {
+  margin-top: 50px;
+  height: 128px;
+}
+
+footer .column {
+  width: 50%;
+  float: left;
+  background-color: white;
+}
+
+footer .column.social {
+  text-align: right;
 }

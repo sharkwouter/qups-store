@@ -1,8 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-  Aantal cups: {{ aantal }}
-  Prijs: {{ prijs }}
+<table>
+  <tr>
+    <td>Aantal cups</td><td>{{ aantal }}</td>
+  </tr>
+  <tr>
+    <td>Per stuk prijs</td><td>€{{ perstukprijs }}</td>
+  </tr>
+  <tr>
+    <td>Verzendkosten</td><td>€{{ verzendkosten }}</td>
+  </tr>
+  <tr>
+    <td>Totale prijs</td><td>€{{ aantal*perstukprijs+verzendkosten }}</td>
+  </tr>
+</table>
+
   <form action="" method="post" novalidate>
     {{ form.hidden_tag() }}
     <p>

@@ -10,31 +10,51 @@
     <link rel="stylesheet" type="text/css" href="/static/style.css">
   </head>
   <body>
-    <header>
-      <a href="{{ url_for('index') }}">Qups</a>
-    </header>
-    <hr>
-    <div class="messages">
-      {% with messages = get_flashed_messages() %}
-      {% if messages %}
-          <ul>
-              {% for message in messages %}
-              <li>{{ message }}</li>
-              {% endfor %}
-          </ul>
-      {% endif %}
-      {% endwith %}
+    <div class="topnav">
+      <div class="column">
+        <img src="/static/images/Logo_Qups_Blauw.png" alt="Qups" class="logo">
+      </div>
+      <div class="column">
+        <nav>
+        Shop - Stories - About
+      </nav>
+      </div>
+      <div class="column">
+
+      </div>
     </div>
+    <header>
+      <div class="column left">
+        <h1>THIS IS NOT JUST A CUP.</h1><br>
+        <h3>IT'S A PLANET SAVING DEVICE</h3>
+      </div>
+      <div class="column right">
+
+      </div>
+    </header>
     <div class="content">
+      <div class="messages">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <h2>{{ message }}</h2>
+          {% endfor %}
+        {% endif %}
+        {% endwith %}
+      </div>
       {% block content %}{% endblock %}
     </div>
-    <hr>
     <footer>
-      <div class="contact">
-        Contact:
+      <div class="column contact">
+        <p>
+          <b>Qups</b><br>
+          Amstelcampus<br>
+          Weesperzijde 190<br>
+          1097 DZ Amsterdam<br>
+        </p>
       </div>
-      <div class="social">
-        Social media:
+      <div class="column social">
+        <ul aria-label="Social bar" id="comp-jw6nhcvs5itemsContainer" class="lb1itemsContainer"><li style="width:20px;height:20px;margin-bottom:0;margin-right:10px;display:inline-block" class="lb1imageItem" id="comp-jw6nhcvs50image"><a href="https://www.facebook.com/Qupsteam" target="_blank" data-content="https://www.facebook.com/Qupsteam" data-type="external" rel="nofollow" id="comp-jw6nhcvs50imagelink" class="lb1imageItemlink"><div data-image-info="{&quot;imageData&quot;:{&quot;type&quot;:&quot;Image&quot;,&quot;id&quot;:&quot;dataItem-jw6nhd0t1&quot;,&quot;metaData&quot;:{&quot;pageId&quot;:&quot;masterPage&quot;,&quot;isPreset&quot;:false,&quot;schemaVersion&quot;:&quot;1.0&quot;,&quot;isHidden&quot;:false},&quot;title&quot;:&quot;&quot;,&quot;uri&quot;:&quot;0fdef751204647a3bbd7eaa2827ed4f9.png&quot;,&quot;description&quot;:&quot;&quot;,&quot;width&quot;:200,&quot;height&quot;:200,&quot;alt&quot;:&quot;&quot;,&quot;name&quot;:&quot;facebook&quot;,&quot;link&quot;:{&quot;type&quot;:&quot;ExternalLink&quot;,&quot;id&quot;:&quot;dataItem-jw6nhd0t2&quot;,&quot;metaData&quot;:{&quot;pageId&quot;:&quot;masterPage&quot;,&quot;isPreset&quot;:false,&quot;schemaVersion&quot;:&quot;1.0&quot;,&quot;isHidden&quot;:false},&quot;url&quot;:&quot;https://www.facebook.com/Qupsteam&quot;,&quot;target&quot;:&quot;_blank&quot;}},&quot;displayMode&quot;:&quot;fill&quot;}" style="width: 20px; height: 20px; position: absolute;" data-has-bg-scroll-effect="" data-style="position:absolute" class="lb1imageItemimage" id="comp-jw6nhcvs50imageimage"><img id="comp-jw6nhcvs50imageimageimage" alt="" data-type="image" itemprop="image" style="width: 20px; height: 20px; object-fit: cover;" src="https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png/v1/fill/w_20,h_20,al_c,usm_0.66_1.00_0.01/facebook.png"></div></a></li><li style="width:20px;height:20px;margin-bottom:0;margin-right:10px;display:inline-block" class="lb1imageItem" id="comp-jw6nhcvs51image"><a href="https://www.linkedin.com/company/teamqups/" target="_blank" data-content="https://www.linkedin.com/company/teamqups/" data-type="external" rel="nofollow" id="comp-jw6nhcvs51imagelink" class="lb1imageItemlink"><div data-image-info="{&quot;imageData&quot;:{&quot;type&quot;:&quot;Image&quot;,&quot;id&quot;:&quot;dataItem-jw6nhd0t3&quot;,&quot;metaData&quot;:{&quot;pageId&quot;:&quot;masterPage&quot;,&quot;isPreset&quot;:false,&quot;schemaVersion&quot;:&quot;1.0&quot;,&quot;isHidden&quot;:false},&quot;title&quot;:&quot;&quot;,&quot;uri&quot;:&quot;6ea5b4a88f0b4f91945b40499aa0af00.png&quot;,&quot;description&quot;:&quot;&quot;,&quot;width&quot;:200,&quot;height&quot;:200,&quot;alt&quot;:&quot;&quot;,&quot;name&quot;:&quot;linkedin&quot;,&quot;link&quot;:{&quot;type&quot;:&quot;ExternalLink&quot;,&quot;id&quot;:&quot;dataItem-jw6nhd0t4&quot;,&quot;metaData&quot;:{&quot;pageId&quot;:&quot;masterPage&quot;,&quot;isPreset&quot;:false,&quot;schemaVersion&quot;:&quot;1.0&quot;,&quot;isHidden&quot;:false},&quot;url&quot;:&quot;https://www.linkedin.com/company/teamqups/&quot;,&quot;target&quot;:&quot;_blank&quot;}},&quot;displayMode&quot;:&quot;fill&quot;}" style="width: 20px; height: 20px; position: absolute;" data-has-bg-scroll-effect="" data-style="position:absolute" class="lb1imageItemimage" id="comp-jw6nhcvs51imageimage"><img id="comp-jw6nhcvs51imageimageimage" alt="" data-type="image" itemprop="image" style="width: 20px; height: 20px; object-fit: cover;" src="https://static.wixstatic.com/media/6ea5b4a88f0b4f91945b40499aa0af00.png/v1/fill/w_20,h_20,al_c,usm_0.66_1.00_0.01/linkedin.png"></div></a></li><li style="width:20px;height:20px;margin-bottom:0;margin-right:10px;display:inline-block" class="lb1imageItem" id="comp-jw6nhcvs52image"><a href="https://www.instagram.com/qupsteam/" target="_blank" data-content="https://www.instagram.com/qupsteam/" data-type="external" rel="nofollow" id="comp-jw6nhcvs52imagelink" class="lb1imageItemlink"><div data-image-info="{&quot;imageData&quot;:{&quot;type&quot;:&quot;Image&quot;,&quot;id&quot;:&quot;dataItem-jw6nhd0u&quot;,&quot;metaData&quot;:{&quot;pageId&quot;:&quot;masterPage&quot;,&quot;isPreset&quot;:false,&quot;schemaVersion&quot;:&quot;1.0&quot;,&quot;isHidden&quot;:false},&quot;title&quot;:&quot;&quot;,&quot;uri&quot;:&quot;01c3aff52f2a4dffa526d7a9843d46ea.png&quot;,&quot;description&quot;:&quot;&quot;,&quot;width&quot;:200,&quot;height&quot;:200,&quot;alt&quot;:&quot;&quot;,&quot;name&quot;:&quot;instagram&quot;,&quot;link&quot;:{&quot;type&quot;:&quot;ExternalLink&quot;,&quot;id&quot;:&quot;dataItem-jw6nhd0u1&quot;,&quot;metaData&quot;:{&quot;pageId&quot;:&quot;masterPage&quot;,&quot;isPreset&quot;:false,&quot;schemaVersion&quot;:&quot;1.0&quot;,&quot;isHidden&quot;:false},&quot;url&quot;:&quot;https://www.instagram.com/qupsteam/&quot;,&quot;target&quot;:&quot;_blank&quot;}},&quot;displayMode&quot;:&quot;fill&quot;}" style="width: 20px; height: 20px; position: absolute;" data-has-bg-scroll-effect="" data-style="position:absolute" class="lb1imageItemimage" id="comp-jw6nhcvs52imageimage"><img id="comp-jw6nhcvs52imageimageimage" alt="" data-type="image" itemprop="image" style="width: 20px; height: 20px; object-fit: cover;" src="https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png/v1/fill/w_20,h_20,al_c,usm_0.66_1.00_0.01/instagram.png"></div></a></li></ul>
       </div>
     </footer>
   </body>

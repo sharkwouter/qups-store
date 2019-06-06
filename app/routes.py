@@ -21,7 +21,9 @@ def bestellen():
 @app.route('/gegevens/<aantal>', methods=['POST', 'GET'])
 def gegevens(aantal):
     title = "Afronden"
-    prijs = int(aantal)*5+7
+    perstukprijs = 5
+    verzendkosten = 7
+    aantal = int(aantal)
     form = GegevensFormulier()
     if form.validate_on_submit():
         order=Order(
@@ -38,7 +40,7 @@ def gegevens(aantal):
         db.session.commit()
         flash('Bedankt voor uw bestelling!')
         return redirect(url_for('index'))
-    return render_template('gegevens.html', title=title, aantal=aantal, prijs=prijs, form=form)
+    return render_template('gegevens.html', title=title, aantal=aantal, perstukprijs=perstukprijs, verzendkosten=verzendkosten, form=form)
 
 @app.route('/bestellingen/<key>')
 def bestellingen(key):
