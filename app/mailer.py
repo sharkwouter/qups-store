@@ -52,3 +52,4 @@ Email: {}\n".format(order.id, order.aantal, 7, totaalprijs, order.voornaam, orde
             mail.send(msg_qups)
         except Exception as e:
             return(str(e))
+        return None
