@@ -41,7 +41,7 @@ def gegevens(aantal):
         db.session.add(order)
         db.session.commit()
         mailer = Mailer(order.id)
-        flash('Bedankt voor uw bestelling!')
+        flash('Bedankt voor uw bestelling! U ontvangt een e-mail met verdere instructies.')
         return redirect(url_for('index'))
     return render_template('gegevens.html', title=title, aantal=aantal, perstukprijs=perstukprijs, verzendkosten=verzendkosten, form=form)
 

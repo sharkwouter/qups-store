@@ -21,7 +21,7 @@ class Mailer(object):
 Bedankt voor uw bestelling bij Qups!\n\n\
 U heeft de volgende bestelling gedaan:\n\
 {} x Qups stalen beker 300 ml a €5,- per stuk\n\
-Verzodenkosten: €{} euro\n\
+Verzodenkosten: €{}\n\
 Totaalprijs: €{}\n\n\
 Om uw bestelling af te ronden vragen wij u om €{} euro over te maken naar de volgende rekening:\n\
 NL97 INGB 0008 5948 02\n\
@@ -39,7 +39,7 @@ Weesperzijde 190\n\
             recipients = [self.email])
         msg_qups.body = "De volgende bestelling is zojuist geplaatst:\n\
 {} x Qups stalen beker\n\
-Verzodenkosten: €{} euro\n\
+Verzodenkosten: €{}\n\
 Totaalprijs: €{}\n\n\
 Gegevens van de besteller:\n\
 Naam: {} {}\n\
