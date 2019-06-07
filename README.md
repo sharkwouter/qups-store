@@ -19,8 +19,14 @@ Maak een nieuw bestaand aan genaamd .flaskenv met daarin het volgende:
 FLASK_APP=qups-store.py
 SECRET_KEY=somepassword
 ADMIN_PASSWORD=wachtwoord-voor-bestellingen-pagina
+MAIL_USERNAME = 'qupsteam@gmail.com'
+MAIL_PASSWORD = 'password'
+MAIL_ADDRESS = 'qupsteam@gmail.com'
+MAIL_SERVER=smtp.googlemail.com
+MAIL_PORT=587
+MAIL_USE_TLS=1
 ```
-Vervang de SECRET_KEY en ADMIN_PASSWORD voor ingewikkelde, veilige wachtwoorden.
+Vervang de SECRET_KEY en ADMIN_PASSWORD voor ingewikkelde, veilige wachtwoorden. Vul het gmail wachtwoord in bij MAIL_PASSWORD.
 
 Debug modus kan als volgt aangezet worden in hetzelfde bestand:
 ```bash
