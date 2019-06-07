@@ -38,6 +38,7 @@ Weesperzijde 190\n\
             sender = self.email,
             recipients = [self.email])
         msg_qups.body = "De volgende bestelling is zojuist geplaatst:\n\
+Ordernummer: {}\n\
 {} x Qups stalen beker\n\
 Verzodenkosten: €{}\n\
 Totaalprijs: €{}\n\n\
@@ -45,7 +46,7 @@ Gegevens van de besteller:\n\
 Naam: {} {}\n\
 Adres: {}\n\
        {} {}\n\
-Email: {}\n".format(order.aantal, 7, totaalprijs, order.voornaam, order.achternaam, order.adres, order.postcode, order.plaats, order.email)
+Email: {}\n".format(order.id, order.aantal, 7, totaalprijs, order.voornaam, order.achternaam, order.adres, order.postcode, order.plaats, order.email)
         try:
             mail.send(msg)
             mail.send(msg_qups)
