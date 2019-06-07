@@ -1,7 +1,9 @@
 from flask import render_template, flash, redirect, url_for
-from app import app, db
+from app import app, db, mail
 from app.models import Order
 from app.forms import BestelFormulier, GegevensFormulier
+from flask_mail import Message
+from app.mailer import Mailer
 import os
 
 @app.route('/')
@@ -34,10 +36,11 @@ def gegevens(aantal):
             postcode=form.postcode.data,
             plaats=form.postcode.data,
             aantal=aantal,
-            prijs=prijs,
+            prijs=perstukprijs*aantal+verzendkosten,
         )
         db.session.add(order)
         db.session.commit()
+        mailer = Mailer(order.id)
         flash('Bedankt voor uw bestelling!')
         return redirect(url_for('index'))
     return render_template('gegevens.html', title=title, aantal=aantal, perstukprijs=perstukprijs, verzendkosten=verzendkosten, form=form)

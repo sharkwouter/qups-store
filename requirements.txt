@@ -4,3 +4,4 @@ flask-wtf
 flask-sqlalchemy
 flask-migrate
 wheel
+flask-mail
